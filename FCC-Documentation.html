@@ -1,0 +1,177 @@
+<nav id="navbar">
+  <header>CSS Text Formatting Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li>
+      <a class="nav-link" href="#Using_Selectors">Using Selectors</a>
+    </li>
+    <li><a class="nav-link" href="#Changing_Text_Color">Changing Text Color</a></li>
+    <li><a class="nav-link" href="#Text_Fonts">Text Fonts</a></li>
+    <li>
+      <a class="nav-link" href="#Emphasising_Words_in_HTML">Emphasising Words in HTML</a>
+    </li>
+    <li>
+      <a class="nav-link" href="#Sizing Text">Sizing Text</a>
+    </li>
+    <li><a class="nav-link" href="#Aligning_Text">Aligning Text</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>
+        Once you have your HTML the way you want it, now what? The nest step to realizing your new website is to format the words the way you imagined for your finished site. When writing a document in Word or Google Docs, or another word processor, you can size your text, change color, bold or underline, even number your document to present the information as needed.
+        With minor adjustments to your HTML, you can do the same with CSS. If you have been writing HTML, you may already know some CSS. Here we will demystify the text manipulation all in one place.
+      </p>
+
+    </article>
+  </section>
+
+  <section class="main-section" id="Using_Selectors">
+    <header>Using Selectors</header>
+    <article>
+
+      <p>
+        There are a few ways to style the text. There are more complicated or combined ways to select styles but we're sticking to the basics for this document. The main ways are</p>
+
+      <ul>
+        <li>Inline</li>
+        <li>Style Block</li>
+        <li>Element Selectors</li>
+        <li>ID Selectors</li>
+        <li>Class Selectors</li>
+      </ul>
+      <p> You've may have already been been changing the style of the text or elements with <b>inline selectors</b> or using a style block by adding <code>color: red;</code> inside your elememt like:
+      </p>
+      <xmp>
+        <p color:red;>Hello World!</p>
+      </xmp>
+      <p class="red-attribute">It should look like (Hello World!).</p>
+      <p>
+        The <b>style block</b> selector is CSS syntax in a 'style' element in HTML.
+      </p>
+
+      <xmp>
+        <style>
+          p {
+            color: red;
+          }
+        </style>
+      </xmp>
+
+      <p>Using an <b>element selector</b> is similar to the style block but in CSS,
+        instead of in the HTML. Just like in the style block,
+        it makes it easy to style all of an element on the website at once. If you style a body element,
+        all body elements have the same style,
+        if you style all h2 elements,
+        they all change,
+        etc.</p>
+      <xmp>
+        body {
+        color: red;
+        }
+      </xmp>
+      <p>If more flexibility is needed the <b>ID selector</b> works on individual elements. Add an <b>ID selector</b>to a single paragraph,
+        heading,
+        div,
+        or any other element. The <b>ID selector</b>can only be used once but it makes custom changes easy. By adding an individual identity to an element it gets its own CSS style. A unique ID is added to an element,
+        like this: </p>
+      <xmp>
+        <p ID="red-text">Hello World!</p>
+      </xmp>
+      <p>Then a "#"(pound) sign is used to connect the CSS to the element. It's important to use an ID that describes the style, for future reference and to avoid mix-ups.</p>
+      <code>#red-text {
+        color: red;
+        }
+      </code>
+      <p>The last selector we'll use is the class selector. It is similar to the ID selector but it can be duplicated. For instance, if every second paragraph should be red, the same class selector can be used for each one. The class selector is useful if there needs to be a repeated style throughout the document.</p>
+      <xmp>
+        <p class="red-text">Lorem ipsum dolor sit amet. Tempor incididunt ut labore.</p>
+        <p>Consectetur adipiscing elit,
+          sed do eiusmod.</p>
+        <p class="red-text">Tempor incididunt ut labore et dolore magna aliqua.</p>
+      </xmp>
+      <p>Then a "."(period) sign is used to connect the CSS to the element. It's helpful to use a class that describes what it does to reduce confusion.</p>
+      <code>.red-text {
+        color: red;
+        }
+      </code>
+
+      <p>It would be simple to turn a ID into a class if you decide you want to repeat the style more often.</p>Using these selectors makes styling easy.
+    </article>
+  </section>
+  <section class="main-section" id="Changing_Text_Color">
+    <header>Changing Text Color</header>
+    <article>There are three main ways to change color in CSS using the above selectors. There are variations on these we will not cover.
+      <ul>
+        <li>Color keyword - like "red"</li>
+        <li>HEX value - like "#ff0000"</li>
+        <li>RGB value - like "rgb(255,0,0)"</li>
+        <li>HSL value - like "hsl(320, 100%, 30%)"</li>
+      </ul>
+      The colors are vast, so using a resource is important. You can use a search engine to find colors. Here are a couple resources that may be helpful. A <a href="https://www.w3schools.com/colors/colors_hex.asp" target="_blank">HEX value</a> reference is useful. And here's a <a href="https://htmlcolorcodes.com/" target="_blank">color</a> picker or <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank">reference</a>. In the picker you can see the value of HEX, RGB, keywords and HSL and convert one to another. Many photo editors allow you to try different colors and copy the color value from the editor. It's a good way to play around with colors before you commit.
+
+    </article>
+  </section>
+  <section class="main-section" id="Text_Fonts">
+    <header>Text Fonts</header>
+    <p>Fonts can make a huge difference in the feel of your website. A font can communicate seriousness, informality, fun, ect. Changing fonts is simple. You can change the font in all the text in the body, or individual sections to make a point. </p>
+    <p>Many fonts are already available, like Arial, or Times. There is an abundance of fonts at <a href="https://fonts.google.com/" target="_blank">Google fonts</a>. They have the HTML links and the CSS for font families to make it easy. It is a good practice to have an alternative font down the font tree in case a specifice font doesn't work on other browsers.</p>
+    <p>If you are using a common font like, Helvetica, you can add the font directly to the CSS of the body or section you want to change.</p>
+    <p>
+      <code>body {</code><code>font-family: 'Quicksand', sans-serif;</code>}
+    </p>
+    If you want to play it safe or you know you want to use a unique font, the link to the font must be added to the HTML:
+    <xmp>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </xmp>
+    You could just add the <p>
+      <code>body {</code><code>font-family: 'Quicksand';</code>}
+      but it's good to have a second, or even a third choice from the font family just in case. If you are unsure try <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts" target="_blank">web fonts</a> for reference.
+    </p>
+
+  </section>
+  <section class="main-section" id="Emphasising_Words_in_HTML">
+    <header>Emphasising Words in HTML</header>
+    <article>Inline text semantic can come in many forms, depending on the point you are trying to make. We are just going to cover what in copy writing would be <b>bold</b>, <i>italics</i>, and <u>underline</u>, how they are expressed, and why. While many emphasised words are to organize and improve visuals, word emphasis is not only for aesthetics. Readers for the sight impaired rely on some semantics to communicate what is important on a web page.</p>
+      <ul>
+        <li>To make text bold, use the font-weight selector. <code>font-weight: bold;</code> Font weight 'normal' is the default. <code>(font-weight: normal;)</code> You can also choose a custom weight in multiples of 100, up to 900. <code>(font-weight: 900;)</code>
+
+        </li>
+        <li>Italics are often used as captions, to emphasis a change in mood, or to point out a technical term.</li>
+        <li>Another way to emphasise text is underlining the text that needs to stand out.</li>
+
+        <li></li>
+        <li></li>
+      </ul>
+      <p>In HTML emphasis can also help with accessability. Underline emphasis has some uses that can be confusing or unhelpful, so check out <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u" target="_blank">The Unarticulated Annotation (Underline) element</a>
+    </article>
+  </section>
+  <section class="main-section" id="Sizing Text">
+    <header>Sizing Text</header>
+    <p></p>
+  </section>
+  <section class="main-section" id="Aligning_Text">
+    <header>Aligning Text</header>
+    <article>
+
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <p>Here are the resources the documentationon this page is taken from when not listed above:
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals" target="_blank">Fundamental text and font styling</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family" target="_blank">Font Families.</a></li>
+        <li></li>
+        <li></li>
+
+        <li></li>
+        <li></li>
+      </ul>
+      </p>
+    </article>
+  </section>
+</main>
